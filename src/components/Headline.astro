@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("news");
+posts.sort((a, b) => b.data.date.localeCompare(a.data.date));
+const post = posts[0];
+---
+
+<a class="block overflow-hidden" href={`/news#${post.id}`}>
+  <div class="flex w-full flex-row gap-2 text-nowrap">
+    <span class="font-bold">{post.data.title}</span>
+    <span class="truncate text-zinc-300">{post.data.summary}</span>
+  </div>
+</a>

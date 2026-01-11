@@ -1,0 +1,6 @@
+[tools]
+node = "25"
+pnpm = "latest"
+
+[env]
+NODE_ENV = "development"

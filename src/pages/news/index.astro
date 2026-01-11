@@ -1,0 +1,32 @@
+---
+export const prerender = false;
+
+import { getCollection } from "astro:content";
+import BoxBar from "../../components/BoxBar.astro";
+import MainBox from "../../components/MainBox.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const posts = await getCollection("news");
+posts.sort((a, b) => b.data.date.localeCompare(a.data.date));
+---
+
+<Layout title="News • Team SMP">
+  <MainBox>
+    <BoxBar title="News" />
+    <div class="flex flex-col gap-4">
+      {
+        posts.map((post) => (
+          <div id={post.id} class="flex flex-col">
+            <span class="text-sm">
+              {new Date(post.data.date).toLocaleDateString("pl-PL")}
+            </span>
+            <span class="text-2xl font-bold">{post.data.title}</span>
+            <span class="leading-tight tracking-tight text-balance text-zinc-300">
+              {post.data.summary}
+            </span>
+          </div>
+        ))
+      }
+    </div>
+  </MainBox>
+</Layout>

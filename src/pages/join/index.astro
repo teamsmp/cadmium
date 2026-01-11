@@ -1,0 +1,61 @@
+---
+import BoxBar from "../../components/BoxBar.astro";
+import MainBox from "../../components/MainBox.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Join • Team SMP">
+  <MainBox>
+    <BoxBar title="Join" />
+    <div>
+      <p class="tracking-tight">
+        Joining the Team SMP on Minecraft Java Edition is simple! Just copy the
+        server IP into your game:
+      </p>
+      <div class="mx-4 mt-1 flex flex-row justify-between text-lg">
+        <span id="copy" class="select-all">mc.teamsmp.uk</span><span
+          id="copied"
+          class="hidden text-emerald-400 transition-all transition-discrete"
+          >Copied!</span
+        >
+      </div>
+      <p class="mt-4 tracking-tight">
+        We strongly recommend playing the Team SMP on Java, but if you aren't
+        able to, then you can join from the mobile version too. Use the server
+        IP <span class="font-bold tracking-normal select-all"
+          >be.teamsmp.uk</span
+        > and leave the port as <span
+          class="font-bold tracking-normal select-all">19132</span
+        >. Playing on Bedrock Edition will not always work.
+      </p>
+      <p class="mt-2 tracking-tight">
+        If you want to play on console, then please contact JunglTemple somehow.
+        Often the system we use for console players simply refuses to work. We
+        recommend using Java instead.
+      </p>
+    </div>
+  </MainBox>
+</Layout>
+
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    const btn = document.getElementById("copy");
+    const copied = document.getElementById("copied");
+
+    if (!btn) return;
+
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText("mc.teamsmp.uk");
+        if (copied) {
+          copied.style.display = "inline";
+          setTimeout(() => {
+            copied.style.display = "none";
+          }, 2000);
+        }
+      } catch (err) {
+        console.error("Failed to copy:", err);
+      }
+    });
+  });
+</script>

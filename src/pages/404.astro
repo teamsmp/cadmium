@@ -1,0 +1,24 @@
+---
+import MainBox from "../components/MainBox.astro";
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import wordmark from "../assets/404.png";
+---
+
+<Layout title="404 • Team SMP">
+  <MainBox>
+    <div class="mb-2 flex w-full flex-row justify-center">
+      <Image src={wordmark} alt="404" class="h-auto w-11/12" />
+    </div>
+    <div class="text-center">
+      <p class="mb-2 text-lg leading-tight tracking-tight">
+        Oops! Looks like the page you were looking for doesn't exist!
+      </p>
+      <span class="text-xl"
+        ><a href="/" class="transition-colors hover:text-emerald-400"
+          ><b>Go back home</b></a
+        ></span
+      >
+    </div>
+  </MainBox>
+</Layout>

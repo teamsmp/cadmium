@@ -1,0 +1,53 @@
+---
+import BoxBar from "../../components/BoxBar.astro";
+import MainBox from "../../components/MainBox.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="About • Team SMP">
+  <MainBox>
+    <BoxBar title="About" />
+    <div class="tracking-tight">
+      <p>
+        The Team SMP is a survival Minecraft server run by <a
+          href="https://github.com/jungltemple"
+          class="text-emerald-400 transition-colors after:content-['_↗'] hover:text-emerald-600"
+          target="_blank">JunglTemple</a
+        > and XxDreamXxXx
+      </p>
+    </div>
+    <div id="contact" class="mt-2 tracking-tight">
+      <span class="text-xl font-bold">Contact Us</span>
+      <ul>
+        <li>
+          JunglTemple - <a
+            href="mailto:antoni@teamsmp.uk"
+            class="text-emerald-400 transition-colors hover:text-emerald-600"
+            >antoni@teamsmp.uk</a
+          >
+        </li>
+        <li>
+          Help - <a
+            href="mailto:help@teamsmp.uk"
+            class="text-emerald-400 transition-colors hover:text-emerald-600"
+            >help@teamsmp.uk</a
+          >
+        </li>
+        <li>
+          Admin Team - <a
+            href="mailto:admins@teamsmp.uk"
+            class="text-emerald-400 transition-colors hover:text-emerald-600"
+            >admins@teamsmp.uk</a
+          >
+        </li>
+        <li>
+          General Enquiries - <a
+            href="mailto:hello@teamsmp.uk"
+            class="text-emerald-400 transition-colors hover:text-emerald-600"
+            >hello@teamsmp.uk</a
+          >
+        </li>
+      </ul>
+    </div>
+  </MainBox>
+</Layout>

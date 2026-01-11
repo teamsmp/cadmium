@@ -1,11 +1,56 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import MainBox from "../components/MainBox.astro";
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import wordmark from "../assets/tsmp-title.png";
+import Headline from "../components/Headline.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+function link(name: string, href: string, target: string = "_self") {
+  return { name, href, target };
+}
+
+const links = [
+  link("About", "/about"),
+  link("Join", "/join"),
+  link("News", "/news"),
+  link("Discord", "https://discord.gg/sGGqR2wDyg", "_blank"),
+  link("YouTube", "https://youtube.com/@teamsmp-server", "_blank"),
+  link("GitHub", "https://github.com/teamsmp", "_blank"),
+];
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Home • Team SMP">
+  <MainBox>
+    <div class="flex w-full flex-row justify-center">
+      <Image src={wordmark} alt="Team SMP wordmark" class="h-24 w-auto" />
+    </div>
+    <div class="my-1 w-full text-center text-xs tracking-wider text-zinc-400">
+      UNITE, SURVIVE, THRIVE!
+    </div>
+    <div class="mb-2 flex w-full flex-col text-xl leading-5">
+      <span
+        >&gt; <a href="/" class="transition-colors hover:text-emerald-400"
+          ><b>Home</b></a
+        ></span
+      >
+      {
+        links.map(({ name, href, target }) => (
+          <span>
+            &gt;{" "}
+            <a
+              href={href}
+              target={target}
+              class="transition-colors hover:text-emerald-400"
+            >
+              {name}
+              {target == "_blank" ? " ↗" : ""}
+            </a>
+          </span>
+        ))
+      }
+    </div>
+    <div>
+      <Headline server:defer />
+    </div>
+  </MainBox>
 </Layout>

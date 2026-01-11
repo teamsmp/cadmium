@@ -1,0 +1,10 @@
+---
+import Back from "./Back.astro";
+
+const { title } = Astro.props;
+---
+
+<div class="sticky top-0 mb-2 flex flex-row justify-between text-xl">
+  <Back />
+  <b>{title}</b>
+</div>
