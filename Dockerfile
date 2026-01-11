@@ -4,6 +4,7 @@ WORKDIR /app
 
 # Enable pnpm via corepack
 RUN apk add pnpm
+RUN pnpm config set approve-builds false
 
 # Copy the lockfile and package.json early to cache layer
 COPY package.json pnpm-lock.yaml ./
@@ -27,6 +28,7 @@ WORKDIR /app
 
 # Enable pnpm
 RUN apk add pnpm
+RUN pnpm config set approve-builds false
 
 # Copy runtime deps and built site
 COPY --from=prod-deps /app/node_modules ./node_modules
