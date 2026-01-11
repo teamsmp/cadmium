@@ -17,5 +17,9 @@ export default defineConfig({
     mode: "standalone",
   }),
 
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: (page) => !page.startsWith("https://www.teamsmp.uk/debug"),
+    }),
+  ],
 });
