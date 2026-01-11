@@ -3,7 +3,7 @@ FROM node:25.2.1-alpine AS base
 WORKDIR /app
 
 # Enable pnpm via corepack
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN npm i -g corepack && corepack enable && corepack prepare pnpm@latest --activate
 
 # Copy the lockfile and package.json early to cache layer
 COPY package.json pnpm-lock.yaml ./
@@ -26,7 +26,7 @@ FROM node:25.2.1-alpine AS runtime
 WORKDIR /app
 
 # Enable pnpm
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN npm i -g corepack && corepack enable && corepack prepare pnpm@latest --activate
 
 # Copy runtime deps and built site
 COPY --from=prod-deps /app/node_modules ./node_modules
