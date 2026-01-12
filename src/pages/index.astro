@@ -50,7 +50,14 @@ const links = [
       }
     </div>
     <div>
-      <Headline server:defer />
+      <Headline server:defer>
+        <a class="block overflow-hidden" href="news" slot="fallback">
+          <div class="flex w-full flex-row gap-2 text-nowrap">
+            <span class="font-bold">News</span>
+            <span class="text-zinc-300">Loading...</span>
+          </div>
+        </a>
+      </Headline>
     </div>
   </MainBox>
 </Layout>
