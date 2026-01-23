@@ -2,6 +2,12 @@
 import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
 const { title } = Astro.props;
+
+const url = new URL(Astro.request.url);
+
+if (url.origin == "https://teamsmp.uk") {
+  Astro.redirect(`https://www.teamsmp.uk${url.pathname}${url.search}`);
+}
 ---
 
 <!doctype html>
