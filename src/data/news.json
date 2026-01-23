@@ -1,5 +1,11 @@
 [
   {
+    "slug": "cli-website-1",
+    "title": "CLI Website",
+    "summary": "We have created a CLI version of this website, which can be accessed using curl. It is still a work-in-progress as of 23 January 2026.",
+    "date": "2026-01-23"
+  },
+  {
     "slug": "hytale-early-access",
     "title": "Hytale Early Access",
     "summary": "After multiple years of waiting, Hytale is available for early access. We are going to be experimenting with making a Hytale server soon.",
