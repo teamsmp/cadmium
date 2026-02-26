@@ -5,6 +5,8 @@ import { Image } from "astro:assets";
 import wordmark from "../assets/tsmp-title.png";
 import Headline from "../components/Headline.astro";
 
+export const prerender = true;
+
 function link(name: string, href: string, target: string = "_self") {
   return { name, href, target };
 }
