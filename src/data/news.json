@@ -1,5 +1,11 @@
 [
   {
+    "slug": "plans-for-new-world-05-26",
+    "title": "Plans for new world",
+    "summary": "We are planning to create a new survival world for the Team SMP. Please send us feedback through the link on the homepage.",
+    "date": "2026-05-02"
+  },
+  {
     "slug": "cli-website-1",
     "title": "CLI Website",
     "summary": "We have created a CLI version of this website, which can be accessed using curl. It is still a work-in-progress as of 23 January 2026.",
