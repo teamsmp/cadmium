@@ -34,5 +34,7 @@ export const GET: APIRoute = async () => {
 
   b += `\n\n [1] ${chalk.green("teamsmp.uk/about")}`;
 
+  b += "\n";
+
   return new Response(b);
 };
