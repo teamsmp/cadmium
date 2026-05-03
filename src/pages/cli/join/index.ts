@@ -2,7 +2,7 @@ import type { APIRoute } from "astro";
 import * as utils from "../../../lib/cli";
 import chalk from "chalk";
 
-export const prerender = true;
+export const prerender = false;
 
 export const GET: APIRoute = async () => {
   let b: string = "\n";
