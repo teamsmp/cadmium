@@ -1,5 +1,29 @@
 [
   {
+    "slug": "yggdrasil-available",
+    "title": "Available on Yggdrasil",
+    "summary": "The Team SMP is now available on the Yggdrasil Network. This website is also on ygg.teamsmp.uk. Refer to the join page for more information on joining through Yggdrasil.",
+    "date": "2026-06-08"
+  },
+  {
+    "slug": "end-open-06-26",
+    "title": "End in new world",
+    "summary": "The End has been opened in the new Team SMP world, at 22:00 UTC today.",
+    "date": "2026-06-02"
+  },
+  {
+    "slug": "nether-open-05-26",
+    "title": "Nether in new world",
+    "summary": "The Nether has been opened in the new Team SMP world, at 18:00 UTC today.",
+    "date": "2026-05-26"
+  },
+  {
+    "slug": "new-world-release-05-26",
+    "title": "New world released",
+    "summary": "The new Team SMP world has been released and is available as of 17:00 UTC today, on Minecraft 26.1.2.",
+    "date": "2026-05-20"
+  },
+  {
     "slug": "plans-for-new-world-05-26",
     "title": "Plans for new world",
     "summary": "We are planning to create a new survival world for the Team SMP. Please send us feedback through the link on the homepage.",
