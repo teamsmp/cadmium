@@ -1,0 +1,51 @@
+---
+import BoxBar from "../../components/BoxBar.astro";
+import MainBox from "../../components/MainBox.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Yggdrasil • Team SMP">
+  <MainBox>
+    <BoxBar title="Yggdrasil" />
+    <div class="flex flex-col gap-2">
+      <div class="flex flex-col">
+        <span class="text-xl select-all">quic://ygp.teamsmp.uk:43212</span>
+        <span class="leading-tight tracking-tight text-balance text-zinc-300"
+          >Public Yggdrasil peer (Essex)</span
+        >
+        <span
+          class="-mt-1 leading-tight tracking-tight text-balance text-zinc-300"
+          >Probably not working</span
+        >
+      </div>
+
+      <div class="flex flex-col">
+        <a
+          href="http://ygg.teamsmp.uk"
+          class="text-xl text-emerald-400 transition-colors hover:text-emerald-600"
+          >ygg.teamsmp.uk</a
+        >
+        <span class="leading-tight tracking-tight text-balance text-zinc-300"
+          >Team SMP server - DNS</span
+        >
+        <span
+          class="-mt-1 leading-tight tracking-tight text-balance text-zinc-300"
+          >(Minecraft and website)</span
+        >
+      </div>
+
+      <div class="flex flex-col">
+        <span class="text-sm select-all"
+          >200:8273:65e0:ab8e:637b:ae8d:d9e8:3be3</span
+        >
+        <span class="leading-tight tracking-tight text-balance text-zinc-300"
+          >Team SMP server IPv6</span
+        >
+        <span
+          class="-mt-1 leading-tight tracking-tight text-balance text-zinc-300"
+          >Minecraft on port 33221</span
+        >
+      </div>
+    </div>
+  </MainBox>
+</Layout>
